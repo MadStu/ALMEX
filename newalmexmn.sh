@@ -30,7 +30,7 @@ RPCU=$(pwgen -1 4 -n)
 PASS=$(pwgen -1 14 -n)
 EXIP=$(curl ipinfo.io/ip)
 
-printf "rpcuser=rpc$RPCU\nrpcpassword=$PASS\nrpcport=10002\nrpcthreads=8\nrpcallowip=127.0.0.1\nbind=$EXIP:10001\nmaxconnections=32\ngen=0\nexternalip=$EXIP\ndaemon=1\n\n" > ~/.almex/almex.conf
+printf "rpcuser=rpc$RPCU\nrpcpassword=$PASS\nrpcport=10002\nrpcthreads=8\nrpcallowip=127.0.0.1\nbind=$EXIP:10001\nmaxconnections=32\ngen=0\nexternalip=$EXIP\ndaemon=1\n\naddnode=51.15.45.154\naddnode=80.211.38.81\naddnode=45.76.32.252\naddnode=217.69.4.126\naddnode=207.246.85.92\naddnode=209.97.164.203\naddnode=80.211.141.65\naddnode=45.76.170.148\naddnode=79.165.242.126\naddnode=88.243.183.78\n\n" > ~/.almex/almex.conf
 
 ~/almex/almexd -daemon
 sleep 20
